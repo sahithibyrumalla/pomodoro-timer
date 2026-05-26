@@ -1,0 +1,145 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background-image: url("background.jpg");
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background-size: cover;
+    background-position: center;
+}
+
+.container{
+    width:420px;
+    height:540px;
+    background:#d8c2eb;
+    border-radius:30px;
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding-top:40px;
+}
+
+h1{
+    color:white;
+    font-size:45px;
+    margin-bottom:25px;
+
+    font-family: "Pixelify Sans", sans-serif;
+}
+
+.timer-box{
+    width:370px;
+    height:360px;
+
+    background:#f7f7f7;
+
+    border-radius:25px;
+    padding-top:40px;
+
+    display:flex;
+    flex-direction:column;
+    
+    align-items:center;
+
+    gap:10px;
+}
+
+h2{
+    font-size:120px;
+    color:#d8c2eb;
+    margin-top:30px;
+    margin-bottom:20px;
+    font-family: "Jersey 10", sans-serif;
+}
+
+button{
+    border:none;
+
+    background:#d8c2eb;
+    color:white;
+
+    padding:18px 45px;
+
+    border-radius:20px;
+
+    cursor:pointer;
+    font-family: "Pixelify Sans", sans-serif;
+    transition: all 0.3s ease;
+    
+}
+#start-btn{
+    width:220px;
+    height:70px;
+    font-size:40px;
+}
+
+#pause-btn,#reset-btn{
+    width:110px;
+    height:50px;
+    font-size:22px;
+
+    align-items: center;
+    justify-content: center;
+    display: flex;
+
+    padding:10px;
+    
+}
+
+button:hover{
+    opacity:0.9;
+    transform: scale(1.1);
+    
+}
+.controls{
+      display:none;
+      gap:20px;
+      justify-content: center;
+      align-items: center;
+      gap:20px;
+      margin-top: 20px;
+      
+      
+}
+#pause-cat{
+    display:none;
+    width:135px;
+   
+}
+#active-cat{
+    display:none;
+    width:135px;
+    margin-top: -5px;
+   
+}
+#break-cat{
+    display:none;
+    width:135px;
+    margin-top: -10px;
+   
+}
+@media (max-width: 500px){
+
+    .container{
+        width:90%;
+        height:auto;
+        padding-bottom:30px;
+    }
+
+    .timer-box{
+        width:90%;
+    }
+
+    h2{
+        font-size:90px;
+    }
+}
+
