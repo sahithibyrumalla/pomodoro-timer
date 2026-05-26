@@ -37,7 +37,11 @@ function startTimer() {
     
     clearInterval(timerInterval);
     document.getElementById("start-btn").style.display = "none";
+    if(isBreak){
+    document.querySelector(".controls").style.display = "none";
+   }else{
     document.querySelector(".controls").style.display = "flex";
+    }
     document.getElementById("pause-btn").style.display = "block";
     document.getElementById("reset-btn").style.display = "block";
     document.getElementById("timer").style.fontSize = "90px";
@@ -47,6 +51,7 @@ function startTimer() {
         document.getElementById("active-cat").style.display = "none";
         document.getElementById("pause-cat").style.display = "none";
         document.getElementById("break-cat").style.display = "block";
+        document.getElementById("break-cat").style.width = "200px";
     } else {
         document.getElementById("active-cat").style.display = "block";
         document.getElementById("pause-cat").style.display = "none";
@@ -72,6 +77,7 @@ function startTimer() {
             if (!isBreak) {
                 isBreak = true;
                 timer = 300;
+                document.querySelector(".controls").style.display = "none";
                 setTimeout(() => {
                 document.getElementById("timer").textContent = "BREAK TIME!";
                 document.getElementById("timer").style.fontSize = "85px";}, 6000);
